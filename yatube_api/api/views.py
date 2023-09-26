@@ -75,7 +75,8 @@ class CommentViewSet(viewsets.ModelViewSet):
 
 
 class FlollowViewSet(
-    mixins.CreateModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
+    mixins.CreateModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet
+):
 
     def list(self, request):
         search_query = self.request.query_params.get('search', None)
